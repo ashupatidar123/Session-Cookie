@@ -1,0 +1,29 @@
+========Set Session==========
+use Illuminate\Support\Facades\Session; //top on every controller
+
+$value = array('user_name'=>'Krishna,'id'=>3)
+Session::put('userLogin', $value);
+
+========Get Session==========
+$val = Session::get('userLogin');
+$val->id;
+
+
+========Set Cookie==========
+use Cookie;
+if($data['remember_me']=='check'){
+    $time = 60*24*31*12;
+}else{
+    $time = 60*4;
+}
+Cookie::queue('login_seller_id',$value->id, $time);
+
+========Get Cookie==========
+$value = Cookie::get('login_seller_id');
+
+
+
+
+
+
+
