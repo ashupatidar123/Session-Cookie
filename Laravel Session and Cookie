@@ -8,6 +8,10 @@ Session::put('userLogin', $value);
 $val = Session::get('userLogin');
 $val->id;
 
+=====Session Destroy======
+Session::flush();
+
+
 
 ========Set Cookie==========
 use Cookie;
@@ -21,8 +25,8 @@ Cookie::queue('login_seller_id',$value->id, $time);
 ========Get Cookie==========
 $value = Cookie::get('login_seller_id');
 
-
-
+========Destroy Cookie==========
+Cookie::queue(Cookie::forget('login_seller_id'));
 
 
 
