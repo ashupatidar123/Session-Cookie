@@ -1,0 +1,19 @@
+Cookie
+$this->load->helper('cookie');
+
+======Set============
+$id = $result['id'];
+if($inputD['remember_me']=='check'){
+    $time = 60*60*24*31*12;
+}else{
+    $time = 60*4;
+}
+set_cookie('admin_id',$id,$time);
+
+======Get============
+get_cookie('admin_id');
+
+======Delete============
+delete_cookie('admin_id'); 
+
+
