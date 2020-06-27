@@ -11,6 +11,8 @@ $val->id;
 =====Session Destroy======
 Session::flush();
 
+=====Specific Session Destroy======
+session()->forget('session_order');
 
 
 ========Set Cookie==========
